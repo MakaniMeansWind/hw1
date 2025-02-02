@@ -12,6 +12,10 @@ the function below should be the only one in this file.
 
 #include "split.h"
 
+#include <cstddef>
+
+// #include <iostream>
+
 using namespace std;
 
 /* Add a prototype for a helper function here if you need */
@@ -29,7 +33,7 @@ void split(Node*& in, Node*& odds, Node*& evens)
 	if(in == NULL)
 	{
 
-		cout << "In is NULL! Recursive function should end." << endl;
+		// cout << "In is NULL! Recursive function should end." << endl;
 
 		return;
 
@@ -55,13 +59,13 @@ void split(Node*& in, Node*& odds, Node*& evens)
 
 }
 
-Node* splitHelperOdd(Node&* in, Node &* odds)
+Node* splitHelperOdd(Node*& in, Node*& odds)
 {
 
 	if(odds == NULL)
 	{
 
-		cout << "Creating head node for ODDS List!" << endl;
+		// cout << "Creating head node for ODDS List!" << endl;
 
 		Node* nextInToBeProcessed = in->next;
 
@@ -85,7 +89,7 @@ Node* splitHelperOdd(Node&* in, Node &* odds)
 	else if(odds->next == NULL)
 	{
 
-		cout << "Adding Node to End of Odds List!" << endl;
+		// cout << "Adding Node to End of Odds List!" << endl;
 
 		Node* nextInToBeProcessed = in->next;
 
@@ -99,13 +103,13 @@ Node* splitHelperOdd(Node&* in, Node &* odds)
 
 }
 
-Node* splitHelperEven(Node&* in, Node &* evens)
+Node* splitHelperEven(Node*& in, Node*& evens)
 {
 
 	if(evens == NULL)
 	{
 
-		cout << "Creating head node for EVENS List!" << endl;
+		// cout << "Creating head node for EVENS List!" << endl;
 
 		Node* nextInToBeProcessed = in->next;
 
@@ -129,7 +133,7 @@ Node* splitHelperEven(Node&* in, Node &* evens)
 	else if(evens->next == NULL)
 	{
 
-		cout << "Adding Node to End of EVENS List!" << endl;
+		// cout << "Adding Node to End of EVENS List!" << endl;
 
 		Node* nextInToBeProcessed = in->next;
 
